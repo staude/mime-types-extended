@@ -4,7 +4,7 @@ Donate link: http://www.staude.net/donate
 Tags: mimetypes, mimetype, mime, media, upload, filetypes
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ English:
 
 This Plugin extends the allowed mimetypes from the media upload dialog.
 
-Supports dwg, asd, asn, tsp, dxf, spl, ptlk, hqx, mbd, mif, hlp, chm, bin, dll, oda, ai, eps, ps, rtc, smp, tbk, vmd, vmf, shtml, xhtml, xml, bcpio, z, cpio, csh, dcr, dir, dxr, dvi, evy, gtar, hdf, php, phtml, latex, bin, mif, nc, cdf, nsc, sh, shar, cab, spr, sprite, sit, sca, sv4cpio, sv4crc, tcl, tex, texinfo, texi, t, tr, roff, man, troff, ustar
+Supports dwg, asd, asn, tsp, dxf, spl, ptlk, hqx, mbd, mif, hlp, chm, bin, dll, oda, ai, eps, ps, rtc, smp, tbk, vmd, vmf, shtml, xhtml, xml, bcpio, z, cpio, csh, dcr, dir, dxr, dvi, evy, gtar, hdf, php, phtml, latex, bin, mif, nc, cdf, nsc, sh, shar, cab, spr, sprite, sit, sca, sv4cpio, sv4crc, tcl, tex, texinfo, texi, t, tr, roff, man, troff, ustar, au, snd, es, tsi, vox, aif, aiff, aifc, dus, cht, mid
 
 If they have more translations for this plugin, please send email to frank@staude.net, I will then install.
 
@@ -28,7 +28,7 @@ Deutsch:
 Dieses Plugin erweitert den Medienupload Dialog um 65 weitere Dateitypen. 
 In der Grundausstattung erlaubt Wordpress nur Dateien weniger Typen. 
 
-Unterstützte Dateitypen: dwg, asd, asn, tsp, dxf, spl, ptlk, hqx, mbd, mif, hlp, chm, bin, dll, oda, ai, eps, ps, rtc, smp, tbk, vmd, vmf, shtml, xhtml, xml, bcpio, z, cpio, csh, dcr, dir, dxr, dvi, evy, gtar, hdf, php, phtml, latex, bin, mif, nc, cdf, nsc, sh, shar, cab, spr, sprite, sit, sca, sv4cpio, sv4crc, tcl, tex, texinfo, texi, t, tr, roff, man, troff, ustar
+Unterstützte Dateitypen: dwg, asd, asn, tsp, dxf, spl, ptlk, hqx, mbd, mif, hlp, chm, bin, dll, oda, ai, eps, ps, rtc, smp, tbk, vmd, vmf, shtml, xhtml, xml, bcpio, z, cpio, csh, dcr, dir, dxr, dvi, evy, gtar, hdf, php, phtml, latex, bin, mif, nc, cdf, nsc, sh, shar, cab, spr, sprite, sit, sca, sv4cpio, sv4crc, tcl, tex, texinfo, texi, t, tr, roff, man, troff, ustar, au, snd, es, tsi, vox, aif, aiff, aifc, dus, cht, mid
 
 Wenn sie weitere Übersetzungen für dieses Plugin haben, bitte per E-Mail an frank@staude.net schicken, ich werde sie dann einbauen.
 
@@ -91,6 +91,10 @@ Wähle das Projekt "WP Plugin: Mime Types Extended" und trag deinen Wunsch ein.
 
 
 == Changelog ==
+
+= 0.2 =
+
+Add following mime types: .au, .snd, .es, .tsi, .vox, .aif, .aiff, .aifc, dus, cht, mid, midi
 
 = 0.1 =
 First version.

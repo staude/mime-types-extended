@@ -110,7 +110,18 @@ class mime_types_extended {
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_man' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_troff' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_ustar' );
-
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_au' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_snd' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_es' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_tsi' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_vox' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_aif' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_aiff' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_aifc' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_dus' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_cht' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_mid' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_midi' );
         
        
     }
@@ -382,6 +393,55 @@ class mime_types_extended {
         <td><input type="checkbox" name="mime_types_extended_settings_ustar" value="1" <?php if ( get_option( 'mime_types_extended_settings_ustar' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .ustar files', 'mime_types_extended' ); ?></td>
     </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_au" value="1" <?php if ( get_option( 'mime_types_extended_settings_au' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .au files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_snd" value="1" <?php if ( get_option( 'mime_types_extended_settings_snd' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .snd files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_es" value="1" <?php if ( get_option( 'mime_types_extended_settings_es' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .es files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_tsi" value="1" <?php if ( get_option( 'mime_types_extended_settings_tsi' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .tsi files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_vox" value="1" <?php if ( get_option( 'mime_types_extended_settings_vox' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .vox files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_aif" value="1" <?php if ( get_option( 'mime_types_extended_settings_aif' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .aif files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_aiff" value="1" <?php if ( get_option( 'mime_types_extended_settings_aiff' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .aiff files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_aifc" value="1" <?php if ( get_option( 'mime_types_extended_settings_aifc' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .aifc files', 'mime_types_extended' ); ?></td>
+    </tr>      
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_dus" value="1" <?php if ( get_option( 'mime_types_extended_settings_dus' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .dus files', 'mime_types_extended' ); ?></td>
+    </tr> 
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_cht" value="1" <?php if ( get_option( 'mime_types_extended_settings_cht' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .cht files', 'mime_types_extended' ); ?></td>
+    </tr>    
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_mid" value="1" <?php if ( get_option( 'mime_types_extended_settings_mid' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .mid files', 'mime_types_extended' ); ?></td>
+    </tr>    
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_midi" value="1" <?php if ( get_option( 'mime_types_extended_settings_midi' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .midi files', 'mime_types_extended' ); ?></td>
+    </tr>   
+    
     
     </table>
     <br/>
@@ -584,6 +644,43 @@ class mime_types_extended {
         if ( get_option( 'mime_types_extended_settings_ustar' ) ) {
              $mimetypes['ustar'] = 'application/x-ustar';
         }
+        if ( get_option( 'mime_types_extended_settings_au' ) ) {
+             $mimetypes['au'] = 'audio/basic';
+        }
+        if ( get_option( 'mime_types_extended_settings_snd' ) ) {
+             $mimetypes['snd'] = 'audio/basic';
+        }
+        if ( get_option( 'mime_types_extended_settings_es' ) ) {
+             $mimetypes['es'] = 'audio/echospeech';
+        }
+        if ( get_option( 'mime_types_extended_settings_tsi' ) ) {
+             $mimetypes['tsi'] = 'audio/tsplayer';
+        }
+        if ( get_option( 'mime_types_extended_settings_vox' ) ) {
+             $mimetypes['vox'] = 'audio/voxware';
+        }
+        if ( get_option( 'mime_types_extended_settings_aif' ) ) {
+             $mimetypes['aif'] = 'audio/x-aiff';
+        }
+        if ( get_option( 'mime_types_extended_settings_aiff' ) ) {
+             $mimetypes['aiff'] = 'audio/x-aiff';
+        }
+        if ( get_option( 'mime_types_extended_settings_aifc' ) ) {
+             $mimetypes['aifc'] = 'audio/x-aiff';
+        }
+        if ( get_option( 'mime_types_extended_settings_dus' ) ) {
+             $mimetypes['dus'] = 'audio/x-dspeeh';
+        }
+        if ( get_option( 'mime_types_extended_settings_cht' ) ) {
+             $mimetypes['cht'] = 'audio/x-dspeeh';
+        }
+        if ( get_option( 'mime_types_extended_settings_mid' ) ) {
+             $mimetypes['mid'] = 'audio/x-midi';
+        }
+        if ( get_option( 'mime_types_extended_settings_midi' ) ) {
+             $mimetypes['midi'] = 'audio/x-midi';
+        }
+        
         return ($mimetypes); 
     }
         

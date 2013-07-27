@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mime Types Extended v0.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-23 21:08+0100\n"
-"PO-Revision-Date: 2013-07-27 06:35:25+0000\n"
+"PO-Revision-Date: 2013-07-27 07:12:01+0000\n"
 "Last-Translator: Frarnk Staude <frank@staude.net>\n"
 "Language-Team: frank@staude.net <frank@staude.net>\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,7 @@ msgstr "enable .dwg files (AutoCAD files)"
 msgid "enable .asn files"
 msgstr "enable .asn files (Astound files)"
 
-#: class-mime-types-extended.php:417
+#: class-mime-types-extended.php:421
 #@ mime_types_extended
 msgid "enable .tsp files"
 msgstr "enable .tsp files (TSP files)"
@@ -60,12 +60,12 @@ msgstr "enable .tsp files (TSP files)"
 msgid "enable .dxf files"
 msgstr "enable .dxf files (AutoCAD files)"
 
-#: class-mime-types-extended.php:361
+#: class-mime-types-extended.php:365
 #@ mime_types_extended
 msgid "enable .spl files"
 msgstr "enable .spl files"
 
-#: class-mime-types-extended.php:321
+#: class-mime-types-extended.php:325
 #@ mime_types_extended
 msgid "enable .ptlk files"
 msgstr "enable .ptlk files (Listenup files)"
@@ -120,47 +120,47 @@ msgstr "enable .ai files (Adobe PostScript files)"
 msgid "enable .eps files"
 msgstr "enable .eps files (Adobe PostScript files)"
 
-#: class-mime-types-extended.php:317
+#: class-mime-types-extended.php:321
 #@ mime_types_extended
 msgid "enable .ps files"
 msgstr "enable .ps files (Adobe PostScript files)"
 
-#: class-mime-types-extended.php:329
+#: class-mime-types-extended.php:333
 #@ mime_types_extended
 msgid "enable .rtc files"
 msgstr "enable .rtc files (RTC files)"
 
-#: class-mime-types-extended.php:353
+#: class-mime-types-extended.php:357
 #@ mime_types_extended
 msgid "enable .smp files"
 msgstr "enable .smp files (Studiom files)"
 
-#: class-mime-types-extended.php:385
+#: class-mime-types-extended.php:389
 #@ mime_types_extended
 msgid "enable .tbk files"
 msgstr "enable .tbk files (Toolbook files)"
 
-#: class-mime-types-extended.php:425
+#: class-mime-types-extended.php:429
 #@ mime_types_extended
 msgid "enable .vmd files"
 msgstr "enable .vmd files (Vocaltec Mediadesc files)"
 
-#: class-mime-types-extended.php:429
+#: class-mime-types-extended.php:433
 #@ mime_types_extended
 msgid "enable .vmf files"
 msgstr "enable .vmf files (Vocaltec Media files)"
 
-#: class-mime-types-extended.php:345
+#: class-mime-types-extended.php:349
 #@ mime_types_extended
 msgid "enable .shtml files"
 msgstr "enable .shtml files (XHTML files)"
 
-#: class-mime-types-extended.php:437
+#: class-mime-types-extended.php:441
 #@ mime_types_extended
 msgid "enable .xhtml files"
 msgstr "enable .xhtml files (XHTML files)"
 
-#: class-mime-types-extended.php:441
+#: class-mime-types-extended.php:445
 #@ mime_types_extended
 msgid "enable .xml files"
 msgstr "enable .xml (XML files)"
@@ -170,7 +170,7 @@ msgstr "enable .xml (XML files)"
 msgid "enable .bcpio files"
 msgstr "enable .bcpio (BCPIO files)"
 
-#: class-mime-types-extended.php:445
+#: class-mime-types-extended.php:449
 #@ mime_types_extended
 msgid "enable .z files"
 msgstr "enable .z  (zlib-compressed files)"
@@ -220,12 +220,12 @@ msgstr "enable .gtar (GNU tar files)"
 msgid "enable .hdf files"
 msgstr "enable .hdf (HDF files)"
 
-#: class-mime-types-extended.php:309
+#: class-mime-types-extended.php:313
 #@ mime_types_extended
 msgid "enable .php files"
 msgstr "enable .php (PHP files)"
 
-#: class-mime-types-extended.php:313
+#: class-mime-types-extended.php:317
 #@ mime_types_extended
 msgid "enable .phtml files"
 msgstr "enable .phtml (PHP files)"
@@ -250,12 +250,12 @@ msgstr "enable .cdf (Unidata CDF files)"
 msgid "enable .nsc files"
 msgstr "enable .nsc (NS Chat files)"
 
-#: class-mime-types-extended.php:337
+#: class-mime-types-extended.php:341
 #@ mime_types_extended
 msgid "enable .sh files"
 msgstr "enable .sh (Bourne Shellscript files)"
 
-#: class-mime-types-extended.php:341
+#: class-mime-types-extended.php:345
 #@ mime_types_extended
 msgid "enable .shar files"
 msgstr "enable .shar (Shell-Archive files)"
@@ -265,67 +265,67 @@ msgstr "enable .shar (Shell-Archive files)"
 msgid "enable .cab files"
 msgstr "enable .cab (Flash Shockwave files)"
 
-#: class-mime-types-extended.php:365
+#: class-mime-types-extended.php:369
 #@ mime_types_extended
 msgid "enable .spr files"
 msgstr "enable .spr (Sprite files)"
 
-#: class-mime-types-extended.php:369
+#: class-mime-types-extended.php:373
 #@ mime_types_extended
 msgid "enable .sprite files"
 msgstr "enable .sprite (Sprite files)"
 
-#: class-mime-types-extended.php:349
+#: class-mime-types-extended.php:353
 #@ mime_types_extended
 msgid "enable .sit files"
 msgstr "enable .sit (Stuffit files"
 
-#: class-mime-types-extended.php:333
+#: class-mime-types-extended.php:337
 #@ mime_types_extended
 msgid "enable .sca files"
 msgstr "enable .sca (Supercard files)"
 
-#: class-mime-types-extended.php:373
+#: class-mime-types-extended.php:377
 #@ mime_types_extended
 msgid "enable .sv4cpio files"
 msgstr "enable .sv4cpio (CPIO files)"
 
-#: class-mime-types-extended.php:377
+#: class-mime-types-extended.php:381
 #@ mime_types_extended
 msgid "enable .sv4crc files"
 msgstr "enable .sv4crc (CPIO files with CRC)"
 
-#: class-mime-types-extended.php:389
+#: class-mime-types-extended.php:393
 #@ mime_types_extended
 msgid "enable .tcl files"
 msgstr "enable .tcl (TCL Scriptfiles)"
 
-#: class-mime-types-extended.php:393
+#: class-mime-types-extended.php:397
 #@ mime_types_extended
 msgid "enable .tex files"
 msgstr "enable .tex (TeX files)"
 
-#: class-mime-types-extended.php:401
+#: class-mime-types-extended.php:405
 #@ mime_types_extended
 msgid "enable .texinfo files"
 msgstr "enable .texinfo (Texinfo files)"
 
-#: class-mime-types-extended.php:397
+#: class-mime-types-extended.php:401
 #@ mime_types_extended
 msgid "enable .texi files"
 msgstr "enable .texi (Texinfo files)"
 
-#: class-mime-types-extended.php:381
+#: class-mime-types-extended.php:385
 #@ mime_types_extended
 msgid "enable .t files"
 msgstr "enable .t (TROFF files (Unix))"
 
-#: class-mime-types-extended.php:405
+#: class-mime-types-extended.php:409
 #@ mime_types_extended
 msgid "enable .tr files"
 msgstr "enable .tr (TROFF files (Unix))"
 
-#: class-mime-types-extended.php:325
+#: class-mime-types-extended.php:329
 #@ mime_types_extended
 msgid "enable .roff files"
 msgstr "enable .roff (TROFF files (Unix))"
@@ -335,12 +335,12 @@ msgstr "enable .roff (TROFF files (Unix))"
 msgid "enable .man files"
 msgstr "enable .man (TROFF files with MAN-Macros (Unix))"
 
-#: class-mime-types-extended.php:409
+#: class-mime-types-extended.php:413
 #@ mime_types_extended
 msgid "enable .troff files"
 msgstr "enable .troff (TROFF files with MAN-Macros (Unix))"
 
-#: class-mime-types-extended.php:421
+#: class-mime-types-extended.php:425
 #@ mime_types_extended
 msgid "enable .ustar files"
 msgstr "enable .ustar (tar-Archive files (Posix))"
@@ -350,7 +350,7 @@ msgstr "enable .ustar (tar-Archive files (Posix))"
 msgid "enable .au files"
 msgstr "enable .au files (Sound files)"
 
-#: class-mime-types-extended.php:357
+#: class-mime-types-extended.php:361
 #@ mime_types_extended
 msgid "enable .snd files"
 msgstr "enable .snd files (Sound files)"
@@ -360,12 +360,12 @@ msgstr "enable .snd files (Sound files)"
 msgid "enable .es files"
 msgstr "enable .es files (Echospeed files)"
 
-#: class-mime-types-extended.php:413
+#: class-mime-types-extended.php:417
 #@ mime_types_extended
 msgid "enable .tsi files"
 msgstr "enable .tsi files (TS-Player files)"
 
-#: class-mime-types-extended.php:433
+#: class-mime-types-extended.php:437
 #@ mime_types_extended
 msgid "enable .vox files"
 msgstr "enable .vox files (Vox files)"
@@ -405,7 +405,7 @@ msgstr "enable .mdi files (Midi files)"
 msgid "enable .midi files"
 msgstr "enable .midi files (Midi files)"
 
-#: class-mime-types-extended.php:449
+#: class-mime-types-extended.php:453
 #@ mime_types_extended
 msgid "Save Changes"
 msgstr "Save Changes"
@@ -460,4 +460,9 @@ msgstr "Select all"
 #@ mime_types_extended
 msgid "deselect all"
 msgstr "Deselect all"
+
+#: class-mime-types-extended.php:309
+#@ mime_types_extended
+msgid "enable .osm files"
+msgstr "enable .osm files (Openstreetmap files)"
 

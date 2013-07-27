@@ -125,7 +125,7 @@ class mime_types_extended {
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_mid' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_midi' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_gpx' );
-        
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_osm' );
        
     }
     
@@ -303,6 +303,10 @@ class mime_types_extended {
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_oda" value="1" <?php if ( get_option( 'mime_types_extended_settings_oda' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .oda files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_osm" value="1" <?php if ( get_option( 'mime_types_extended_settings_osm' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .osm files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_php" value="1" <?php if ( get_option( 'mime_types_extended_settings_php' ) ) echo " checked "; ?> /></td>
@@ -682,8 +686,12 @@ class mime_types_extended {
              $mimetypes['midi'] = 'audio/x-midi';
         }
         if ( get_option( 'mime_types_extended_settings_gpx' ) ) {
-             $mimetypes['midi'] = 'application/xml';
+             $mimetypes['gpx'] = 'application/xml';
         }        
+        if ( get_option( 'mime_types_extended_settings_osm' ) ) {
+             $mimetypes['osm'] = 'application/octet-stream';
+        }        
+        
         return ($mimetypes); 
     }
         

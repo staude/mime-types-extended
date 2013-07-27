@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mime Types Extended v0.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-23 21:02+0100\n"
-"PO-Revision-Date: 2013-07-27 06:33:45+0000\n"
+"PO-Revision-Date: 2013-07-27 07:11:12+0000\n"
 "Last-Translator: Frarnk Staude <frank@staude.net>\n"
 "Language-Team: frank@staude.net <frank@staude.net>\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,7 @@ msgstr ".dwg Dateien erlauben (AutoCAD-Dateien)"
 msgid "enable .asn files"
 msgstr ".asn Dateien erlauben (Astound-Dateien)"
 
-#: class-mime-types-extended.php:417
+#: class-mime-types-extended.php:421
 #@ mime_types_extended
 msgid "enable .tsp files"
 msgstr ".tsp Dateien erlauben (TSP-Dateien)"
@@ -60,12 +60,12 @@ msgstr ".tsp Dateien erlauben (TSP-Dateien)"
 msgid "enable .dxf files"
 msgstr ".dxf Dateien erlauben (AutoCAD-Dateien)"
 
-#: class-mime-types-extended.php:361
+#: class-mime-types-extended.php:365
 #@ mime_types_extended
 msgid "enable .spl files"
 msgstr ".spl Dateien erlauben (Flash Futuresplash-Dateien)"
 
-#: class-mime-types-extended.php:321
+#: class-mime-types-extended.php:325
 #@ mime_types_extended
 msgid "enable .ptlk files"
 msgstr ".ptlk Dateien erlauben (Listenup-Dateien)"
@@ -120,47 +120,47 @@ msgstr ".ai Dateien erlauben (Adobe PostScript-Dateien)"
 msgid "enable .eps files"
 msgstr ".eps Dateien erlauben (Adobe PostScript-Dateien)"
 
-#: class-mime-types-extended.php:317
+#: class-mime-types-extended.php:321
 #@ mime_types_extended
 msgid "enable .ps files"
 msgstr ".ps Dateien erlauben (Adobe PostScript-Dateien)"
 
-#: class-mime-types-extended.php:329
+#: class-mime-types-extended.php:333
 #@ mime_types_extended
 msgid "enable .rtc files"
 msgstr ".rtc Dateien erlauben (RTC-Dateien)"
 
-#: class-mime-types-extended.php:353
+#: class-mime-types-extended.php:357
 #@ mime_types_extended
 msgid "enable .smp files"
 msgstr ".smp Dateien erlauben (Studiom-Dateien)"
 
-#: class-mime-types-extended.php:385
+#: class-mime-types-extended.php:389
 #@ mime_types_extended
 msgid "enable .tbk files"
 msgstr ".tbk Dateien erlauben (Toolbook-Dateien)"
 
-#: class-mime-types-extended.php:425
+#: class-mime-types-extended.php:429
 #@ mime_types_extended
 msgid "enable .vmd files"
 msgstr ".vmd Dateien erlauben (Vocaltec Mediadesc-Dateien)"
 
-#: class-mime-types-extended.php:429
+#: class-mime-types-extended.php:433
 #@ mime_types_extended
 msgid "enable .vmf files"
 msgstr ".vmf Dateien erlauben (Vocaltec Media-Dateien)"
 
-#: class-mime-types-extended.php:345
+#: class-mime-types-extended.php:349
 #@ mime_types_extended
 msgid "enable .shtml files"
 msgstr ".shtml Dateien erlauben (XHTML-Dateien)"
 
-#: class-mime-types-extended.php:437
+#: class-mime-types-extended.php:441
 #@ mime_types_extended
 msgid "enable .xhtml files"
 msgstr ".xhtml Dateien erlauben (XHTML-Dateien)"
 
-#: class-mime-types-extended.php:441
+#: class-mime-types-extended.php:445
 #@ mime_types_extended
 msgid "enable .xml files"
 msgstr ".xml Dateien erlauben (XML-Dateien)"
@@ -170,7 +170,7 @@ msgstr ".xml Dateien erlauben (XML-Dateien)"
 msgid "enable .bcpio files"
 msgstr ".bcpio Dateien erlauben (BCPIO-Dateien)"
 
-#: class-mime-types-extended.php:445
+#: class-mime-types-extended.php:449
 #@ mime_types_extended
 msgid "enable .z files"
 msgstr ".z Dateien erlauben (zlib-komprimierte Dateien)"
@@ -208,7 +208,7 @@ msgstr ".dvi Dateien erlauben (DVI-Dateien)"
 #: class-mime-types-extended.php:249
 #@ mime_types_extended
 msgid "enable .evy files"
-msgstr ".evyDateien erlauben (Envoy-Dateien)"
+msgstr ".evy Dateien erlauben (Envoy-Dateien)"
 
 #: class-mime-types-extended.php:257
 #@ mime_types_extended
@@ -220,12 +220,12 @@ msgstr ".gtar Dateien erlauben (GNU tar-Archivdateien)"
 msgid "enable .hdf files"
 msgstr ".hdf Dateien erlauben (HDF-Dateien)"
 
-#: class-mime-types-extended.php:309
+#: class-mime-types-extended.php:313
 #@ mime_types_extended
 msgid "enable .php files"
 msgstr ".php Dateien erlauben (PHP-Dateien)"
 
-#: class-mime-types-extended.php:313
+#: class-mime-types-extended.php:317
 #@ mime_types_extended
 msgid "enable .phtml files"
 msgstr ".phtml Dateien erlauben (PHP-Dateien)"
@@ -250,12 +250,12 @@ msgstr ".cdf Dateien erlauben (Unidata CDF-Dateien)"
 msgid "enable .nsc files"
 msgstr ".nsc Dateien erlauben (NS Chat-Dateien)"
 
-#: class-mime-types-extended.php:337
+#: class-mime-types-extended.php:341
 #@ mime_types_extended
 msgid "enable .sh files"
 msgstr ".sh Dateien erlauben (Bourne Shellscript-Dateien)"
 
-#: class-mime-types-extended.php:341
+#: class-mime-types-extended.php:345
 #@ mime_types_extended
 msgid "enable .shar files"
 msgstr ".shar Dateien erlauben (Shell-Archivdateien)"
@@ -265,67 +265,67 @@ msgstr ".shar Dateien erlauben (Shell-Archivdateien)"
 msgid "enable .cab files"
 msgstr ".cab Dateien erlauben (Flash Shockwave-Dateien)"
 
-#: class-mime-types-extended.php:365
+#: class-mime-types-extended.php:369
 #@ mime_types_extended
 msgid "enable .spr files"
 msgstr ".spr Dateien erlauben (Sprite-Dateien)"
 
-#: class-mime-types-extended.php:369
+#: class-mime-types-extended.php:373
 #@ mime_types_extended
 msgid "enable .sprite files"
 msgstr ".sprite Dateien erlauben (Sprite-Dateien)"
 
-#: class-mime-types-extended.php:349
+#: class-mime-types-extended.php:353
 #@ mime_types_extended
 msgid "enable .sit files"
 msgstr ".sit Dateien erlauben (Stuffit-Dateien)"
 
-#: class-mime-types-extended.php:333
+#: class-mime-types-extended.php:337
 #@ mime_types_extended
 msgid "enable .sca files"
 msgstr ".sca Dateien erlauben (Supercard-Dateien)"
 
-#: class-mime-types-extended.php:373
+#: class-mime-types-extended.php:377
 #@ mime_types_extended
 msgid "enable .sv4cpio files"
 msgstr ".sv4cpio Dateien erlauben (CPIO-Dateien)"
 
-#: class-mime-types-extended.php:377
+#: class-mime-types-extended.php:381
 #@ mime_types_extended
 msgid "enable .sv4crc files"
 msgstr ".sv4crc Dateien erlauben (CPIO-Dateien mit CRC)"
 
-#: class-mime-types-extended.php:389
+#: class-mime-types-extended.php:393
 #@ mime_types_extended
 msgid "enable .tcl files"
 msgstr ".tcl Dateien erlauben (TCL Scriptdateien)"
 
-#: class-mime-types-extended.php:393
+#: class-mime-types-extended.php:397
 #@ mime_types_extended
 msgid "enable .tex files"
 msgstr ".tex Dateien erlauben (TeX-Dateien)"
 
-#: class-mime-types-extended.php:401
+#: class-mime-types-extended.php:405
 #@ mime_types_extended
 msgid "enable .texinfo files"
 msgstr ".texinfo Dateien erlauben (Texinfo-Dateien)"
 
-#: class-mime-types-extended.php:397
+#: class-mime-types-extended.php:401
 #@ mime_types_extended
 msgid "enable .texi files"
 msgstr ".texi Dateien erlauben (Texinfo-Dateien)"
 
-#: class-mime-types-extended.php:381
+#: class-mime-types-extended.php:385
 #@ mime_types_extended
 msgid "enable .t files"
 msgstr ".t Dateien erlauben (TROFF-Dateien (Unix))"
 
-#: class-mime-types-extended.php:405
+#: class-mime-types-extended.php:409
 #@ mime_types_extended
 msgid "enable .tr files"
 msgstr ".tr Dateien erlauben (TROFF-Dateien (Unix))"
 
-#: class-mime-types-extended.php:325
+#: class-mime-types-extended.php:329
 #@ mime_types_extended
 msgid "enable .roff files"
 msgstr ".roff Dateien erlauben (TROFF-Dateien (Unix))"
@@ -335,12 +335,12 @@ msgstr ".roff Dateien erlauben (TROFF-Dateien (Unix))"
 msgid "enable .man files"
 msgstr ".man Dateien erlauben (TROFF-Dateien mit MAN-Makros (Unix))"
 
-#: class-mime-types-extended.php:409
+#: class-mime-types-extended.php:413
 #@ mime_types_extended
 msgid "enable .troff files"
 msgstr ".troff Dateien erlauben (TROFF-Dateien mit MAN-Makros (Unix))"
 
-#: class-mime-types-extended.php:421
+#: class-mime-types-extended.php:425
 #@ mime_types_extended
 msgid "enable .ustar files"
 msgstr ".ustar Dateien erlauben (tar-Archivdateien (Posix))"
@@ -350,7 +350,7 @@ msgstr ".ustar Dateien erlauben (tar-Archivdateien (Posix))"
 msgid "enable .au files"
 msgstr ".au Dateien erlauben (Sound-Dateien)"
 
-#: class-mime-types-extended.php:357
+#: class-mime-types-extended.php:361
 #@ mime_types_extended
 msgid "enable .snd files"
 msgstr ".snd Dateien erlauben (Sound-Dateien)"
@@ -360,12 +360,12 @@ msgstr ".snd Dateien erlauben (Sound-Dateien)"
 msgid "enable .es files"
 msgstr ".es Dateien erlauben (Echospeed-Dateien)"
 
-#: class-mime-types-extended.php:413
+#: class-mime-types-extended.php:417
 #@ mime_types_extended
 msgid "enable .tsi files"
 msgstr ".tsi Dateien erlauben (TS Player-Dateien)"
 
-#: class-mime-types-extended.php:433
+#: class-mime-types-extended.php:437
 #@ mime_types_extended
 msgid "enable .vox files"
 msgstr ".vox Dateien erlauben (Vox Binärdateien)"
@@ -405,7 +405,7 @@ msgstr ".mid Dateien erlauben (Midi-Dateien)"
 msgid "enable .midi files"
 msgstr ".midi Dateien erlauben (Midi-Dateien)"
 
-#: class-mime-types-extended.php:449
+#: class-mime-types-extended.php:453
 #@ mime_types_extended
 msgid "Save Changes"
 msgstr "Änderungen speichern"
@@ -462,4 +462,9 @@ msgstr "Alle erlauben"
 #@ mime_types_extended
 msgid "deselect all"
 msgstr "Alle verbieten"
+
+#: class-mime-types-extended.php:309
+#@ mime_types_extended
+msgid "enable .osm files"
+msgstr ".osm Dateien erlauben (Openstreetmap-Dateien)"
 

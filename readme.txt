@@ -16,7 +16,8 @@ English:
 
 This Plugin extends the allowed mimetypes from the media upload dialog.
 
-Supports dwg, asd, asn, tsp, dxf, spl, ptlk, hqx, mbd, mif, hlp, chm, bin, dll, oda, ai, eps, ps, rtc, smp, tbk, vmd, vmf, shtml, xhtml, xml, bcpio, z, cpio, csh, dcr, dir, dxr, dvi, evy, gtar, hdf, php, phtml, latex, bin, mif, nc, cdf, nsc, sh, shar, cab, spr, sprite, sit, sca, sv4cpio, sv4crc, tcl, tex, texinfo, texi, t, tr, roff, man, troff, ustar, au, snd, es, tsi, vox, aif, aiff, aifc, dus, cht, mid
+Supports .ai, .aif. .aifc, .aiff, .asd, .au, .bcpio, .bin, .cab, .cdf, .chm, .cht, .cpio, .csh, .dcr, .dir, .dll, .dus, .dvi, .dwg, .dxf, .dxr, .eps, .es, .evy, .gpx, .gtar, .hdf, .hlp, .hqx, .latex, .man, .mbd, .mid, .midi. .mif, .nc, .nsc, .oda, .osm, .php, .phtml, .ps, .ptlk, .roff, .rtc, .sca, .sh, .shar, .shtml, .sit, .smp, .snd, .spl, .spr, .sprite, .sv4cpio, .sv4crc, .t, .tbk, .tcl, .tex, .texi, .texinfo, .tr, .troff, .tsi, .tsp, .ustar, .vmd, .vmf, .vox, .xhtml, .xml, .z
+
 
 If they have more translations for this plugin, please send email to frank@staude.net, I will then install.
 
@@ -28,7 +29,7 @@ Deutsch:
 Dieses Plugin erweitert den Medienupload Dialog um 65 weitere Dateitypen. 
 In der Grundausstattung erlaubt Wordpress nur Dateien weniger Typen. 
 
-Unterstützte Dateitypen: dwg, asd, asn, tsp, dxf, spl, ptlk, hqx, mbd, mif, hlp, chm, bin, dll, oda, ai, eps, ps, rtc, smp, tbk, vmd, vmf, shtml, xhtml, xml, bcpio, z, cpio, csh, dcr, dir, dxr, dvi, evy, gtar, hdf, php, phtml, latex, bin, mif, nc, cdf, nsc, sh, shar, cab, spr, sprite, sit, sca, sv4cpio, sv4crc, tcl, tex, texinfo, texi, t, tr, roff, man, troff, ustar, au, snd, es, tsi, vox, aif, aiff, aifc, dus, cht, mid
+Unterstützte Dateitypen: .ai, .aif. .aifc, .aiff, .asd, .au, .bcpio, .bin, .cab, .cdf, .chm, .cht, .cpio, .csh, .dcr, .dir, .dll, .dus, .dvi, .dwg, .dxf, .dxr, .eps, .es, .evy, .gpx, .gtar, .hdf, .hlp, .hqx, .latex, .man, .mbd, .mid, .midi. .mif, .nc, .nsc, .oda, .osm, .php, .phtml, .ps, .ptlk, .roff, .rtc, .sca, .sh, .shar, .shtml, .sit, .smp, .snd, .spl, .spr, .sprite, .sv4cpio, .sv4crc, .t, .tbk, .tcl, .tex, .texi, .texinfo, .tr, .troff, .tsi, .tsp, .ustar, .vmd, .vmf, .vox, .xhtml, .xml, .z
 
 Wenn sie weitere Übersetzungen für dieses Plugin haben, bitte per E-Mail an frank@staude.net schicken, ich werde sie dann einbauen.
 
@@ -93,10 +94,12 @@ Wähle das Projekt "WP Plugin: Mime Types Extended" und trag deinen Wunsch ein.
 == Changelog ==
 
 = 0.4 =
-0000032: Add GPX Support
-0000033: Add select/deselect all function
-0000034: sort mimetypes in alphabetical order
-0000035: delete pluginoptions on uninstall
+- 0000032: Add GPX Support
+- 0000033: Add select/deselect all function
+- 0000034: sort mimetypes in alphabetical order
+- 0000035: delete pluginoptions on uninstall
+- 0000036: Fix: typos in german translation
+- 0000037: Add OSM (Openstreetmap) Support
 
 = 0.3.1 =
 correct translations to edit it with codestyling-localization plugin

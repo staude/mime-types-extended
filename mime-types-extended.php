@@ -36,6 +36,7 @@ if (!class_exists( 'mime_types_extended' ) ) {
      * Delete options on plugin uninstall
      */
     function mime_types_extended_uninstall() {
+        global $wpdb;
         $wpdb->query( "DELETE FROM $wpdb->options WHERE option_name LIKE 'mime_types_extended_settings_%';" );
     }
 

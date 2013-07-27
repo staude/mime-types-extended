@@ -3,8 +3,8 @@ Contributors:f.staude
 Donate link: http://www.staude.net/donate
 Tags: mimetypes, mimetype, mime, media, upload, filetypes
 Requires at least: 3.0
-Tested up to: 3.5.1
-Stable tag: 0.3.1
+Tested up to: 3.5.2
+Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,12 @@ Wähle das Projekt "WP Plugin: Mime Types Extended" und trag deinen Wunsch ein.
 
 
 == Changelog ==
+
+= 0.4 =
+0000032: Add GPX Support
+0000033: Add select/deselect all function
+0000034: sort mimetypes in alphabetical order
+0000035: delete pluginoptions on uninstall
 
 = 0.3.1 =
 correct translations to edit it with codestyling-localization plugin

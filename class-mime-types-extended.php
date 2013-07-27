@@ -46,6 +46,8 @@ class mime_types_extended {
     }
     
     function registerSettings() {
+        wp_register_script( 'mime-types-extended', plugins_url( 'js/mime-types-extended.js', __FILE__ ) );
+        
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_dwg' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_asd' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_asn' );
@@ -122,133 +124,78 @@ class mime_types_extended {
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_cht' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_mid' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_midi' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_gpx' );
         
        
     }
     
     function createOptionsMimeExtendedMenu () {
         global $settings, $mimetypes;
+        
+        wp_enqueue_script( 'mime-types-extended' );
     ?>
     <div class="wrap"  id="settingsNeedfulTweaks">
     <h2><?php _e( 'MIME Types settings', 'mime_types_extended' ); ?></h2>
     <p><?php _e( 'Activate mimetypes you want to use.', 'mime_types_extended' ); ?></p>
     <form method="POST" action="options.php">
+    <input type="button" value="<?php _e( 'select all', 'mime_types_extended' ); ?>" onClick="mime_types_extended_selectall(this.form)"> 
+    <input type="button" value="<?php _e( 'deselect all', 'mime_types_extended' ); ?>" onClick="mime_types_extended_deselectall(this.form)">
     <?php 
     settings_fields( 'mime_types_extended_settings' ); 
     echo '<table class="form-table">';
     ?>
     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_ai" value="1" <?php if ( get_option( 'mime_types_extended_settings_ai' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .ai files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_aif" value="1" <?php if ( get_option( 'mime_types_extended_settings_aif' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .aif files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_aifc" value="1" <?php if ( get_option( 'mime_types_extended_settings_aifc' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .aifc files', 'mime_types_extended' ); ?></td>
+    </tr>      
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_aiff" value="1" <?php if ( get_option( 'mime_types_extended_settings_aiff' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .aiff files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
         <td style="width: 13px;"><input type="checkbox" name="mime_types_extended_settings_asd" value="1" <?php if ( get_option( 'mime_types_extended_settings_asd' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .asd files', 'mime_types_extended' ); ?></td>
-    </tr>
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_dwg" value="1" <?php if ( get_option( 'mime_types_extended_settings_dwg' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .dwg files', 'mime_types_extended' ); ?></td>
     </tr>
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_asn" value="1" <?php if ( get_option( 'mime_types_extended_settings_asn' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .asn files', 'mime_types_extended' ); ?></td>
     </tr>
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_tsp" value="1" <?php if ( get_option( 'mime_types_extended_settings_tsp' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .tsp files', 'mime_types_extended' ); ?></td>
-    </tr>
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_dxf" value="1" <?php if ( get_option( 'mime_types_extended_settings_dxf' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .dxf files', 'mime_types_extended' ); ?></td>
-    </tr>    
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_spl" value="1" <?php if ( get_option( 'mime_types_extended_settings_spl' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .spl files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_ptlk" value="1" <?php if ( get_option( 'mime_types_extended_settings_ptlk' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .ptlk files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_hqx" value="1" <?php if ( get_option( 'mime_types_extended_settings_hqx' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .hqx files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_mbd" value="1" <?php if ( get_option( 'mime_types_extended_settings_mbd' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .mbd files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_mif" value="1" <?php if ( get_option( 'mime_types_extended_settings_mif' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .mif files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_hlp" value="1" <?php if ( get_option( 'mime_types_extended_settings_hlp' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .hlp files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_chm" value="1" <?php if ( get_option( 'mime_types_extended_settings_chm' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .chm files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_bin" value="1" <?php if ( get_option( 'mime_types_extended_settings_bin' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .bin files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_dll" value="1" <?php if ( get_option( 'mime_types_extended_settings_dll' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .dll files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_oda" value="1" <?php if ( get_option( 'mime_types_extended_settings_oda' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .oda files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_ai" value="1" <?php if ( get_option( 'mime_types_extended_settings_ai' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .ai files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_eps" value="1" <?php if ( get_option( 'mime_types_extended_settings_eps' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .eps files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_ps" value="1" <?php if ( get_option( 'mime_types_extended_settings_ps' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .ps files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_rtc" value="1" <?php if ( get_option( 'mime_types_extended_settings_rtc' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .rtc files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_smp" value="1" <?php if ( get_option( 'mime_types_extended_settings_smp' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .smp files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_tbk" value="1" <?php if ( get_option( 'mime_types_extended_settings_tbk' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .tbk files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_vmd" value="1" <?php if ( get_option( 'mime_types_extended_settings_vmd' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .vmd files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_vmf" value="1" <?php if ( get_option( 'mime_types_extended_settings_vmf' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .vmf files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_shtml" value="1" <?php if ( get_option( 'mime_types_extended_settings_shtml' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .shtml files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_xhtml" value="1" <?php if ( get_option( 'mime_types_extended_settings_xhtml' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .xhtml files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_xml" value="1" <?php if ( get_option( 'mime_types_extended_settings_xml' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .xml files', 'mime_types_extended' ); ?></td>
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_au" value="1" <?php if ( get_option( 'mime_types_extended_settings_au' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .au files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_bcpio" value="1" <?php if ( get_option( 'mime_types_extended_settings_bcpio' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .bcpio files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_z" value="1" <?php if ( get_option( 'mime_types_extended_settings_z' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .z files', 'mime_types_extended' ); ?></td>
+        <td><input type="checkbox" name="mime_types_extended_settings_bin" value="1" <?php if ( get_option( 'mime_types_extended_settings_bin' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .bin files', 'mime_types_extended' ); ?></td>
     </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_cab" value="1" <?php if ( get_option( 'mime_types_extended_settings_cab' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .cab files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_cdf" value="1" <?php if ( get_option( 'mime_types_extended_settings_cdf' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .cdf files', 'mime_types_extended' ); ?></td>
+    </tr>      
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_chm" value="1" <?php if ( get_option( 'mime_types_extended_settings_chm' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .chm files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_cht" value="1" <?php if ( get_option( 'mime_types_extended_settings_cht' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .cht files', 'mime_types_extended' ); ?></td>
+    </tr>    
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_cpio" value="1" <?php if ( get_option( 'mime_types_extended_settings_cpio' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .cpio files', 'mime_types_extended' ); ?></td>
@@ -266,17 +213,45 @@ class mime_types_extended {
         <td><?php _e( 'enable .dir files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_dxr" value="1" <?php if ( get_option( 'mime_types_extended_settings_dxr' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .dxr files', 'mime_types_extended' ); ?></td>
+        <td><input type="checkbox" name="mime_types_extended_settings_dll" value="1" <?php if ( get_option( 'mime_types_extended_settings_dll' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .dll files', 'mime_types_extended' ); ?></td>
     </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_dus" value="1" <?php if ( get_option( 'mime_types_extended_settings_dus' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .dus files', 'mime_types_extended' ); ?></td>
+    </tr> 
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_dvi" value="1" <?php if ( get_option( 'mime_types_extended_settings_dvi' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .dvi files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_dwg" value="1" <?php if ( get_option( 'mime_types_extended_settings_dwg' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .dwg files', 'mime_types_extended' ); ?></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_dxf" value="1" <?php if ( get_option( 'mime_types_extended_settings_dxf' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .dxf files', 'mime_types_extended' ); ?></td>
+    </tr>    
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_dxr" value="1" <?php if ( get_option( 'mime_types_extended_settings_dxr' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .dxr files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_eps" value="1" <?php if ( get_option( 'mime_types_extended_settings_eps' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .eps files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_es" value="1" <?php if ( get_option( 'mime_types_extended_settings_es' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .es files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_evy" value="1" <?php if ( get_option( 'mime_types_extended_settings_evy' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .evy files', 'mime_types_extended' ); ?></td>
     </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_gpx" value="1" <?php if ( get_option( 'mime_types_extended_settings_gpx' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .gpx files', 'mime_types_extended' ); ?></td>
+    </tr>       
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_gtar" value="1" <?php if ( get_option( 'mime_types_extended_settings_gtar' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .gtar files', 'mime_types_extended' ); ?></td>
@@ -284,6 +259,50 @@ class mime_types_extended {
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_hdf" value="1" <?php if ( get_option( 'mime_types_extended_settings_hdf' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .hdf files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_hlp" value="1" <?php if ( get_option( 'mime_types_extended_settings_hlp' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .hlp files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_hqx" value="1" <?php if ( get_option( 'mime_types_extended_settings_hqx' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .hqx files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_latex" value="1" <?php if ( get_option( 'mime_types_extended_settings_latex' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .latex files', 'mime_types_extended' ); ?></td>
+    </tr>      
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_man" value="1" <?php if ( get_option( 'mime_types_extended_settings_man' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .man files', 'mime_types_extended' ); ?></td>
+    </tr>       
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_mbd" value="1" <?php if ( get_option( 'mime_types_extended_settings_mbd' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .mbd files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_mid" value="1" <?php if ( get_option( 'mime_types_extended_settings_mid' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .mid files', 'mime_types_extended' ); ?></td>
+    </tr>    
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_midi" value="1" <?php if ( get_option( 'mime_types_extended_settings_midi' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .midi files', 'mime_types_extended' ); ?></td>
+    </tr>   
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_mif" value="1" <?php if ( get_option( 'mime_types_extended_settings_mif' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .mif files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_nc" value="1" <?php if ( get_option( 'mime_types_extended_settings_nc' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .nc files', 'mime_types_extended' ); ?></td>
+    </tr>      
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_nsc" value="1" <?php if ( get_option( 'mime_types_extended_settings_nsc' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .nsc files', 'mime_types_extended' ); ?></td>
+    </tr>      
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_oda" value="1" <?php if ( get_option( 'mime_types_extended_settings_oda' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .oda files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_php" value="1" <?php if ( get_option( 'mime_types_extended_settings_php' ) ) echo " checked "; ?> /></td>
@@ -294,28 +313,24 @@ class mime_types_extended {
         <td><?php _e( 'enable .phtml files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_latex" value="1" <?php if ( get_option( 'mime_types_extended_settings_latex' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .latex files', 'mime_types_extended' ); ?></td>
+        <td><input type="checkbox" name="mime_types_extended_settings_ps" value="1" <?php if ( get_option( 'mime_types_extended_settings_ps' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .ps files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_ptlk" value="1" <?php if ( get_option( 'mime_types_extended_settings_ptlk' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .ptlk files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_roff" value="1" <?php if ( get_option( 'mime_types_extended_settings_roff' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .roff files', 'mime_types_extended' ); ?></td>
     </tr>      
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_bin" value="1" <?php if ( get_option( 'mime_types_extended_settings_bin' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .bin files', 'mime_types_extended' ); ?></td>
-    </tr>      
+        <td><input type="checkbox" name="mime_types_extended_settings_rtc" value="1" <?php if ( get_option( 'mime_types_extended_settings_rtc' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .rtc files', 'mime_types_extended' ); ?></td>
+    </tr>  
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_mif" value="1" <?php if ( get_option( 'mime_types_extended_settings_mif' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .mif files', 'mime_types_extended' ); ?></td>
-    </tr>      
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_nc" value="1" <?php if ( get_option( 'mime_types_extended_settings_nc' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .nc files', 'mime_types_extended' ); ?></td>
-    </tr>      
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_cdf" value="1" <?php if ( get_option( 'mime_types_extended_settings_cdf' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .cdf files', 'mime_types_extended' ); ?></td>
-    </tr>      
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_nsc" value="1" <?php if ( get_option( 'mime_types_extended_settings_nsc' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .nsc files', 'mime_types_extended' ); ?></td>
+        <td><input type="checkbox" name="mime_types_extended_settings_sca" value="1" <?php if ( get_option( 'mime_types_extended_settings_sca' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .sca files', 'mime_types_extended' ); ?></td>
     </tr>      
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_sh" value="1" <?php if ( get_option( 'mime_types_extended_settings_sh' ) ) echo " checked "; ?> /></td>
@@ -326,8 +341,24 @@ class mime_types_extended {
         <td><?php _e( 'enable .shar files', 'mime_types_extended' ); ?></td>
     </tr>      
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_cab" value="1" <?php if ( get_option( 'mime_types_extended_settings_cab' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .cab files', 'mime_types_extended' ); ?></td>
+        <td><input type="checkbox" name="mime_types_extended_settings_shtml" value="1" <?php if ( get_option( 'mime_types_extended_settings_shtml' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .shtml files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_sit" value="1" <?php if ( get_option( 'mime_types_extended_settings_sit' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .sit files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_smp" value="1" <?php if ( get_option( 'mime_types_extended_settings_smp' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .smp files', 'mime_types_extended' ); ?></td>
+    </tr>  
+     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_snd" value="1" <?php if ( get_option( 'mime_types_extended_settings_snd' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .snd files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_spl" value="1" <?php if ( get_option( 'mime_types_extended_settings_spl' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .spl files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_spr" value="1" <?php if ( get_option( 'mime_types_extended_settings_spr' ) ) echo " checked "; ?> /></td>
@@ -338,14 +369,6 @@ class mime_types_extended {
         <td><?php _e( 'enable .sprite files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_sit" value="1" <?php if ( get_option( 'mime_types_extended_settings_sit' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .sit files', 'mime_types_extended' ); ?></td>
-    </tr>  
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_sca" value="1" <?php if ( get_option( 'mime_types_extended_settings_sca' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .sca files', 'mime_types_extended' ); ?></td>
-    </tr>      
-    <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_sv4cpio" value="1" <?php if ( get_option( 'mime_types_extended_settings_sv4cpio' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .sv4cpio files', 'mime_types_extended' ); ?></td>
     </tr>      
@@ -353,6 +376,14 @@ class mime_types_extended {
         <td><input type="checkbox" name="mime_types_extended_settings_sv4crc" value="1" <?php if ( get_option( 'mime_types_extended_settings_sv4crc' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .sv4crc files', 'mime_types_extended' ); ?></td>
     </tr>      
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_t" value="1" <?php if ( get_option( 'mime_types_extended_settings_t' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .t files', 'mime_types_extended' ); ?></td>
+    </tr>      
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_tbk" value="1" <?php if ( get_option( 'mime_types_extended_settings_tbk' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .tbk files', 'mime_types_extended' ); ?></td>
+    </tr>  
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_tcl" value="1" <?php if ( get_option( 'mime_types_extended_settings_tcl' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .tcl files', 'mime_types_extended' ); ?></td>
@@ -362,87 +393,57 @@ class mime_types_extended {
         <td><?php _e( 'enable .tex files', 'mime_types_extended' ); ?></td>
     </tr>      
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_texinfo" value="1" <?php if ( get_option( 'mime_types_extended_settings_texinfo' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .texinfo files', 'mime_types_extended' ); ?></td>
-    </tr>      
-    <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_texi" value="1" <?php if ( get_option( 'mime_types_extended_settings_texi' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .texi files', 'mime_types_extended' ); ?></td>
     </tr>      
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_t" value="1" <?php if ( get_option( 'mime_types_extended_settings_t' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .t files', 'mime_types_extended' ); ?></td>
+        <td><input type="checkbox" name="mime_types_extended_settings_texinfo" value="1" <?php if ( get_option( 'mime_types_extended_settings_texinfo' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .texinfo files', 'mime_types_extended' ); ?></td>
     </tr>      
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_tr" value="1" <?php if ( get_option( 'mime_types_extended_settings_tr' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .tr files', 'mime_types_extended' ); ?></td>
     </tr>      
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_roff" value="1" <?php if ( get_option( 'mime_types_extended_settings_roff' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .roff files', 'mime_types_extended' ); ?></td>
-    </tr>      
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_man" value="1" <?php if ( get_option( 'mime_types_extended_settings_man' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .man files', 'mime_types_extended' ); ?></td>
-    </tr>       
-    <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_troff" value="1" <?php if ( get_option( 'mime_types_extended_settings_troff' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .troff files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_tsi" value="1" <?php if ( get_option( 'mime_types_extended_settings_tsi' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .tsi files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_tsp" value="1" <?php if ( get_option( 'mime_types_extended_settings_tsp' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .tsp files', 'mime_types_extended' ); ?></td>
+    </tr>
+    <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_ustar" value="1" <?php if ( get_option( 'mime_types_extended_settings_ustar' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .ustar files', 'mime_types_extended' ); ?></td>
     </tr>  
-     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_au" value="1" <?php if ( get_option( 'mime_types_extended_settings_au' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .au files', 'mime_types_extended' ); ?></td>
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_vmd" value="1" <?php if ( get_option( 'mime_types_extended_settings_vmd' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .vmd files', 'mime_types_extended' ); ?></td>
     </tr>  
-     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_snd" value="1" <?php if ( get_option( 'mime_types_extended_settings_snd' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .snd files', 'mime_types_extended' ); ?></td>
-    </tr>  
-     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_es" value="1" <?php if ( get_option( 'mime_types_extended_settings_es' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .es files', 'mime_types_extended' ); ?></td>
-    </tr>  
-     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_tsi" value="1" <?php if ( get_option( 'mime_types_extended_settings_tsi' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .tsi files', 'mime_types_extended' ); ?></td>
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_vmf" value="1" <?php if ( get_option( 'mime_types_extended_settings_vmf' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .vmf files', 'mime_types_extended' ); ?></td>
     </tr>  
      <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_vox" value="1" <?php if ( get_option( 'mime_types_extended_settings_vox' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .vox files', 'mime_types_extended' ); ?></td>
     </tr>  
-     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_aif" value="1" <?php if ( get_option( 'mime_types_extended_settings_aif' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .aif files', 'mime_types_extended' ); ?></td>
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_xhtml" value="1" <?php if ( get_option( 'mime_types_extended_settings_xhtml' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .xhtml files', 'mime_types_extended' ); ?></td>
     </tr>  
-     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_aiff" value="1" <?php if ( get_option( 'mime_types_extended_settings_aiff' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .aiff files', 'mime_types_extended' ); ?></td>
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_xml" value="1" <?php if ( get_option( 'mime_types_extended_settings_xml' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .xml files', 'mime_types_extended' ); ?></td>
     </tr>  
-     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_aifc" value="1" <?php if ( get_option( 'mime_types_extended_settings_aifc' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .aifc files', 'mime_types_extended' ); ?></td>
-    </tr>      
-     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_dus" value="1" <?php if ( get_option( 'mime_types_extended_settings_dus' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .dus files', 'mime_types_extended' ); ?></td>
-    </tr> 
     <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_cht" value="1" <?php if ( get_option( 'mime_types_extended_settings_cht' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .cht files', 'mime_types_extended' ); ?></td>
-    </tr>    
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_mid" value="1" <?php if ( get_option( 'mime_types_extended_settings_mid' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .mid files', 'mime_types_extended' ); ?></td>
-    </tr>    
-    <tr>
-        <td><input type="checkbox" name="mime_types_extended_settings_midi" value="1" <?php if ( get_option( 'mime_types_extended_settings_midi' ) ) echo " checked "; ?> /></td>
-        <td><?php _e( 'enable .midi files', 'mime_types_extended' ); ?></td>
-    </tr>   
-    
-    
+        <td><input type="checkbox" name="mime_types_extended_settings_z" value="1" <?php if ( get_option( 'mime_types_extended_settings_z' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .z files', 'mime_types_extended' ); ?></td>
+    </tr>  
     </table>
     <br/>
     <input type="submit" class="button-primary" value="<?php _e('Save Changes', 'mime_types_extended' )?>" />
@@ -680,7 +681,9 @@ class mime_types_extended {
         if ( get_option( 'mime_types_extended_settings_midi' ) ) {
              $mimetypes['midi'] = 'audio/x-midi';
         }
-        
+        if ( get_option( 'mime_types_extended_settings_gpx' ) ) {
+             $mimetypes['midi'] = 'application/xml';
+        }        
         return ($mimetypes); 
     }
         

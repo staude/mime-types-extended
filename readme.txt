@@ -3,8 +3,8 @@ Contributors:f.staude
 Donate link: http://www.staude.net/donate
 Tags: mimetypes, mimetype, mime, media, upload, filetypes
 Requires at least: 3.0
-Tested up to: 3.5.2
-Stable tag: 0.4
+Tested up to: 3.6
+Stable tag: 0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,9 @@ Wähle das Projekt "WP Plugin: Mime Types Extended" und trag deinen Wunsch ein.
 
 
 == Changelog ==
+
+= 0.5 =
+- 0000040: Add svg, svgz support
 
 = 0.4 =
 - 0000032: Add GPX Support

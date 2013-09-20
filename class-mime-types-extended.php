@@ -126,6 +126,8 @@ class mime_types_extended {
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_midi' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_gpx' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_osm' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_svg' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_svgz' );
        
     }
     
@@ -379,7 +381,15 @@ class mime_types_extended {
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_sv4crc" value="1" <?php if ( get_option( 'mime_types_extended_settings_sv4crc' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .sv4crc files', 'mime_types_extended' ); ?></td>
-    </tr>      
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_svg" value="1" <?php if ( get_option( 'mime_types_extended_settings_svg' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .svg files', 'mime_types_extended' ); ?></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_svgz" value="1" <?php if ( get_option( 'mime_types_extended_settings_svgz' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .svgz files', 'mime_types_extended' ); ?></td>
+    </tr>
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_t" value="1" <?php if ( get_option( 'mime_types_extended_settings_t' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .t files', 'mime_types_extended' ); ?></td>
@@ -691,7 +701,12 @@ class mime_types_extended {
         if ( get_option( 'mime_types_extended_settings_osm' ) ) {
              $mimetypes['osm'] = 'application/octet-stream';
         }        
-        
+        if ( get_option( 'mime_types_extended_settings_svg' ) ) {
+             $mimetypes['svg'] = 'image/svg+xml';
+        }  
+        if ( get_option( 'mime_types_extended_settings_svgz' ) ) {
+             $mimetypes['svgz'] = 'image/svg+xml';
+        }  
         return ($mimetypes); 
     }
         

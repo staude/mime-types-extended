@@ -128,7 +128,7 @@ class mime_types_extended {
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_osm' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_svg' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_svgz' );
-       
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_img' );
     }
     
     function createOptionsMimeExtendedMenu () {
@@ -269,6 +269,10 @@ class mime_types_extended {
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_hqx" value="1" <?php if ( get_option( 'mime_types_extended_settings_hqx' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .hqx files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_img" value="1" <?php if ( get_option( 'mime_types_extended_settings_img' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .img files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_latex" value="1" <?php if ( get_option( 'mime_types_extended_settings_latex' ) ) echo " checked "; ?> /></td>
@@ -706,7 +710,10 @@ class mime_types_extended {
         }  
         if ( get_option( 'mime_types_extended_settings_svgz' ) ) {
              $mimetypes['svgz'] = 'image/svg+xml';
-        }  
+        }
+        if ( get_option( 'mime_types_extended_settings_img' ) ) {
+             $mimetypes['img'] = 'application/octet-stream';
+        }
         return ($mimetypes); 
     }
         

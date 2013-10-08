@@ -3,8 +3,8 @@ Contributors:f.staude
 Donate link: http://www.staude.net/donate
 Tags: mimetypes, mimetype, mime, media, upload, filetypes
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: 0.5
+Tested up to: 3.6.1
+Stable tag: 0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ English:
 
 This Plugin extends the allowed mimetypes from the media upload dialog.
 
-Supports .ai, .aif. .aifc, .aiff, .asd, .au, .bcpio, .bin, .cab, .cdf, .chm, .cht, .cpio, .csh, .dcr, .dir, .dll, .dus, .dvi, .dwg, .dxf, .dxr, .eps, .es, .evy, .gpx, .gtar, .hdf, .hlp, .hqx, .latex, .man, .mbd, .mid, .midi. .mif, .nc, .nsc, .oda, .osm, .php, .phtml, .ps, .ptlk, .roff, .rtc, .sca, .sh, .shar, .shtml, .sit, .smp, .snd, .spl, .spr, .sprite, .sv4cpio, .sv4crc, .svg, .scgz, .t, .tbk, .tcl, .tex, .texi, .texinfo, .tr, .troff, .tsi, .tsp, .ustar, .vmd, .vmf, .vox, .xhtml, .xml, .z
+Supports .ai, .aif. .aifc, .aiff, .asd, .au, .bcpio, .bin, .cab, .cdf, .chm, .cht, .cpio, .csh, .dcr, .dir, .dll, .dus, .dvi, .dwg, .dxf, .dxr, .eps, .es, .evy, .gpx, .gtar, .hdf, .hlp, .hqx, .imh, .latex, .man, .mbd, .mid, .midi. .mif, .nc, .nsc, .oda, .osm, .php, .phtml, .ps, .ptlk, .roff, .rtc, .sca, .sh, .shar, .shtml, .sit, .smp, .snd, .spl, .spr, .sprite, .sv4cpio, .sv4crc, .svg, .scgz, .t, .tbk, .tcl, .tex, .texi, .texinfo, .tr, .troff, .tsi, .tsp, .ustar, .vmd, .vmf, .vox, .xhtml, .xml, .z
 
 
 If they have more translations for this plugin, please send email to frank@staude.net, I will then install.
@@ -29,7 +29,7 @@ Deutsch:
 Dieses Plugin erweitert den Medienupload Dialog um 67 weitere Dateitypen. 
 In der Grundausstattung erlaubt Wordpress nur Dateien weniger Typen. 
 
-Unterstützte Dateitypen: .ai, .aif. .aifc, .aiff, .asd, .au, .bcpio, .bin, .cab, .cdf, .chm, .cht, .cpio, .csh, .dcr, .dir, .dll, .dus, .dvi, .dwg, .dxf, .dxr, .eps, .es, .evy, .gpx, .gtar, .hdf, .hlp, .hqx, .latex, .man, .mbd, .mid, .midi. .mif, .nc, .nsc, .oda, .osm, .php, .phtml, .ps, .ptlk, .roff, .rtc, .sca, .sh, .shar, .shtml, .sit, .smp, .snd, .spl, .spr, .sprite, .sv4cpio, .sv4crc, .svg, .svgz, .t, .tbk, .tcl, .tex, .texi, .texinfo, .tr, .troff, .tsi, .tsp, .ustar, .vmd, .vmf, .vox, .xhtml, .xml, .z
+Unterstützte Dateitypen: .ai, .aif. .aifc, .aiff, .asd, .au, .bcpio, .bin, .cab, .cdf, .chm, .cht, .cpio, .csh, .dcr, .dir, .dll, .dus, .dvi, .dwg, .dxf, .dxr, .eps, .es, .evy, .gpx, .gtar, .hdf, .hlp, .hqx, .img, .latex, .man, .mbd, .mid, .midi. .mif, .nc, .nsc, .oda, .osm, .php, .phtml, .ps, .ptlk, .roff, .rtc, .sca, .sh, .shar, .shtml, .sit, .smp, .snd, .spl, .spr, .sprite, .sv4cpio, .sv4crc, .svg, .svgz, .t, .tbk, .tcl, .tex, .texi, .texinfo, .tr, .troff, .tsi, .tsp, .ustar, .vmd, .vmf, .vox, .xhtml, .xml, .z
 
 Wenn sie weitere Übersetzungen für dieses Plugin haben, bitte per E-Mail an frank@staude.net schicken, ich werde sie dann einbauen.
 
@@ -92,6 +92,9 @@ Wähle das Projekt "WP Plugin: Mime Types Extended" und trag deinen Wunsch ein.
 
 
 == Changelog ==
+
+= 0.6 =
+- 0000043: Add img support
 
 = 0.5 =
 - 0000040: Add svg, svgz support

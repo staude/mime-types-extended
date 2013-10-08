@@ -16,7 +16,7 @@ English:
 
 This Plugin extends the allowed mimetypes from the media upload dialog.
 
-Supports .ai, .aif. .aifc, .aiff, .asd, .au, .bcpio, .bin, .cab, .cdf, .chm, .cht, .cpio, .csh, .dcr, .dir, .dll, .dus, .dvi, .dwg, .dxf, .dxr, .eps, .es, .evy, .gpx, .gtar, .hdf, .hlp, .hqx, .imh, .latex, .man, .mbd, .mid, .midi. .mif, .nc, .nsc, .oda, .osm, .php, .phtml, .ps, .ptlk, .roff, .rtc, .sca, .sh, .shar, .shtml, .sit, .smp, .snd, .spl, .spr, .sprite, .sv4cpio, .sv4crc, .svg, .scgz, .t, .tbk, .tcl, .tex, .texi, .texinfo, .tr, .troff, .tsi, .tsp, .ustar, .vmd, .vmf, .vox, .xhtml, .xml, .z
+Supports .ai, .aif. .aifc, .aiff, .asd, .au, .bcpio, .bin, .cab, .cdf, .chm, .cht, .cpio, .csh, .dcr, .dir, .dll, .dus, .dvi, .dwg, .dxf, .dxr, .eps, .es, .evy, .gpx, .gtar, .hdf, .hlp, .hqx, .img, .latex, .man, .mbd, .mid, .midi. .mif, .nc, .nsc, .oda, .osm, .php, .phtml, .ps, .ptlk, .roff, .rtc, .sca, .sh, .shar, .shtml, .sit, .smp, .snd, .spl, .spr, .sprite, .sv4cpio, .sv4crc, .svg, .scgz, .t, .tbk, .tcl, .tex, .texi, .texinfo, .tr, .troff, .tsi, .tsp, .ustar, .vmd, .vmf, .vox, .xhtml, .xml, .z
 
 
 If they have more translations for this plugin, please send email to frank@staude.net, I will then install.

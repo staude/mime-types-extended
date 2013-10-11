@@ -129,6 +129,7 @@ class mime_types_extended {
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_svg' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_svgz' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_img' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_exe' );
     }
     
     function createOptionsMimeExtendedMenu () {
@@ -250,6 +251,10 @@ class mime_types_extended {
         <td><input type="checkbox" name="mime_types_extended_settings_evy" value="1" <?php if ( get_option( 'mime_types_extended_settings_evy' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .evy files', 'mime_types_extended' ); ?></td>
     </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_exe" value="1" <?php if ( get_option( 'mime_types_extended_settings_exe' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .exe files', 'mime_types_extended' ); ?></td>
+    </tr>      
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_gpx" value="1" <?php if ( get_option( 'mime_types_extended_settings_gpx' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .gpx files', 'mime_types_extended' ); ?></td>
@@ -713,6 +718,9 @@ class mime_types_extended {
         }
         if ( get_option( 'mime_types_extended_settings_img' ) ) {
              $mimetypes['img'] = 'application/octet-stream';
+        }
+        if ( get_option( 'mime_types_extended_settings_exe' ) ) {
+             $mimetypes['exe'] = 'application/x-msdownload';
         }
         return ($mimetypes); 
     }

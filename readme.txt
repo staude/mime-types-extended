@@ -3,8 +3,8 @@ Contributors:f.staude
 Donate link: http://www.staude.net/donate
 Tags: mimetypes, mimetype, mime, media, upload, filetypes
 Requires at least: 3.0
-Tested up to: 3.6.1
-Stable tag: 0.7
+Tested up to: 3.7.1
+Stable tag: 0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,7 +81,7 @@ Wähle das Projekt "WP Plugin: Mime Types Extended" und melde den Fehler.
 
 Bitte geh auf die Seite http://bugs.staude.net und melde dich dort an.
 
-Wähle das Projekt "WP Plugin: Mime Types Extended" und trag deinen Wunsch ein.
+Wähle das Projekt "WP Plugin: Mime Types Extended" und trage deinen Wunsch ein.
 
 
 
@@ -93,33 +93,36 @@ Wähle das Projekt "WP Plugin: Mime Types Extended" und trag deinen Wunsch ein.
 
 == Changelog ==
 
+= 0.8 =
+- Disable some php notices if WP Debug active
+
 = 0.7 =
-- 0000044: Add exe support
+- #0000044: Add exe support
 
 = 0.6 =
-- 0000043: Add img support
+- #0000043: Add img support
 
 = 0.5 =
-- 0000040: Add svg, svgz support
+- #0000040: Add svg, svgz support
 
 = 0.4 =
-- 0000032: Add GPX Support
-- 0000033: Add select/deselect all function
-- 0000034: sort mimetypes in alphabetical order
-- 0000035: delete pluginoptions on uninstall
-- 0000036: Fix: typos in german translation
-- 0000037: Add OSM (Openstreetmap) Support
+- #0000032: Add GPX Support
+- #0000033: Add select/deselect all function
+- #0000034: sort mimetypes in alphabetical order
+- #0000035: delete pluginoptions on uninstall
+- #0000036: Fix: typos in german translation
+- #0000037: Add OSM (Openstreetmap) Support
 
 = 0.3.1 =
-correct translations to edit it with codestyling-localization plugin
+- correct translations to edit it with codestyling-localization plugin
 
 = 0.3 =
-Added Translations de_DE, en_US
+- Added Translations de_DE, en_US
 
 = 0.2 =
 
-Add following mime types: .au, .snd, .es, .tsi, .vox, .aif, .aiff, .aifc, dus, cht, mid, midi
+- Add following mime types: .au, .snd, .es, .tsi, .vox, .aif, .aiff, .aifc, dus, cht, mid, midi
 
 = 0.1 =
-First version.
+- First version.
 

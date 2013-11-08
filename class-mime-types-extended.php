@@ -1,6 +1,6 @@
 <?php
 
-/*  Copyright 2012  Frank Staude  (email : frank@staude.net)
+/*  Copyright 2012-2013  Frank Staude  (email : frank@staude.net)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -36,16 +36,16 @@ class mime_types_extended {
      * 
      * load the plugin textdomain with translations
      */
-    function load_translations() {
+    static public function load_translations() {
         load_plugin_textdomain( 'mime_types_extended', false, apply_filters ( 'mime_types_extended_translationpath', dirname( plugin_basename( __FILE__ )) . '/languages/' ) ); 
     }
     
-    function optionsMimeExtendedMenu() {
+    static public function optionsMimeExtendedMenu() {
         add_options_page( 'Mime Types',  __('Mime types','mime_types_extended', 'hinweis'), 'manage_options',
         __FILE__, array( 'mime_types_extended', 'createOptionsMimeExtendedMenu' ) );        
     }
     
-    function registerSettings() {
+    static public function registerSettings() {
         wp_register_script( 'mime-types-extended', plugins_url( 'js/mime-types-extended.js', __FILE__ ) );
         
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_dwg' );
@@ -132,7 +132,7 @@ class mime_types_extended {
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_exe' );
     }
     
-    function createOptionsMimeExtendedMenu () {
+    static public function createOptionsMimeExtendedMenu () {
         global $settings, $mimetypes;
         
         wp_enqueue_script( 'mime-types-extended' );
@@ -475,7 +475,7 @@ class mime_types_extended {
     <?php    
     }
     
-    function addMimeTypes( $mimetypes = array() ) {
+    static public function addMimeTypes( $mimetypes = array() ) {
         if ( get_option( 'mime_types_extended_settings_asd' ) ) {
              $mimetypes['asd'] = 'application/astound';
         }

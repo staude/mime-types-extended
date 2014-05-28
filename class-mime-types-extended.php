@@ -1,6 +1,6 @@
 <?php
 
-/*  Copyright 2012-2013  Frank Staude  (email : frank@staude.net)
+/*  Copyright 2012-2014  Frank Staude  (email : frank@staude.net)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -130,6 +130,7 @@ class mime_types_extended {
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_svgz' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_img' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_exe' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_epub' );
     }
     
     static public function createOptionsMimeExtendedMenu () {
@@ -242,6 +243,10 @@ class mime_types_extended {
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_eps" value="1" <?php if ( get_option( 'mime_types_extended_settings_eps' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .eps files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_epub" value="1" <?php if ( get_option( 'mime_types_extended_settings_epub' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .epub files', 'mime_types_extended' ); ?></td>
     </tr>  
      <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_es" value="1" <?php if ( get_option( 'mime_types_extended_settings_es' ) ) echo " checked "; ?> /></td>
@@ -722,6 +727,9 @@ class mime_types_extended {
         if ( get_option( 'mime_types_extended_settings_exe' ) ) {
              $mimetypes['exe'] = 'application/x-msdownload';
         }
+        if ( get_option( 'mime_types_extended_settings_epub' ) ) {
+             $mimetypes['epub'] = 'application/epub+zip';
+        }        
         return ($mimetypes); 
     }
         

@@ -131,6 +131,7 @@ class mime_types_extended {
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_img' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_exe' );
         register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_epub' );
+        register_setting( 'mime_types_extended_settings', 'mime_types_extended_settings_mobi' );
     }
     
     static public function createOptionsMimeExtendedMenu () {
@@ -307,6 +308,10 @@ class mime_types_extended {
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_mif" value="1" <?php if ( get_option( 'mime_types_extended_settings_mif' ) ) echo " checked "; ?> /></td>
         <td><?php _e( 'enable .mif files', 'mime_types_extended' ); ?></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" name="mime_types_extended_settings_mobi" value="1" <?php if ( get_option( 'mime_types_extended_settings_mobi' ) ) echo " checked "; ?> /></td>
+        <td><?php _e( 'enable .mobi files', 'mime_types_extended' ); ?></td>
     </tr>  
     <tr>
         <td><input type="checkbox" name="mime_types_extended_settings_nc" value="1" <?php if ( get_option( 'mime_types_extended_settings_nc' ) ) echo " checked "; ?> /></td>
@@ -729,7 +734,10 @@ class mime_types_extended {
         }
         if ( get_option( 'mime_types_extended_settings_epub' ) ) {
              $mimetypes['epub'] = 'application/epub+zip';
-        }        
+        }   
+        if ( get_option( 'mime_types_extended_settings_mobi' ) ) {
+             $mimetypes['mobi'] = 'application/x-mobipocket-ebook';
+        }          
         return ($mimetypes); 
     }
         

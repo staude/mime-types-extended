@@ -8,7 +8,7 @@ Version: 0.10
 Text Domain: mime_types_extended
 Domain Path: languages
 Author URI: http://www.staude.net/
-Compatibility: WordPress 3.9.2
+Compatibility: WordPress 4.0
 */
 
 /*  Copyright 2012-2014  Frank Staude  (email : frank@staude.net)

@@ -4,7 +4,7 @@ Plugin Name: Mime Types Extended
 Plugin URI: http://www.staude.net/wordpress/plugins/MimeTypesExtended
 Description: This Plugin extends the allowed mimetypes from the media upload dialog 
 Author: Frank Staude
-Version: 0.10
+Version: 0.11
 Text Domain: mime_types_extended
 Domain Path: languages
 Author URI: http://www.staude.net/
@@ -41,6 +41,9 @@ if (!class_exists( 'mime_types_extended' ) ) {
     }
 
     register_uninstall_hook( __FILE__,  'mime_types_extended_uninstall' );
+
+    $plugin = plugin_basename(__FILE__);
+    add_filter( "plugin_action_links_$plugin", array( 'mime_types_extended', 'plugin_settings_link') );
 
     $mime_types_extended = new mime_types_extended();
 

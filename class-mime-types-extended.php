@@ -484,7 +484,13 @@ class mime_types_extended {
     </div>
     <?php    
     }
-    
+
+    /**
+     * Add allowed mimetype to wordpress
+     *
+     * @param array $mimetypes
+     * @return array
+     */
     static public function addMimeTypes( $mimetypes = array() ) {
         if ( get_option( 'mime_types_extended_settings_asd' ) ) {
              $mimetypes['asd'] = 'application/astound';
@@ -739,6 +745,18 @@ class mime_types_extended {
              $mimetypes['mobi'] = 'application/x-mobipocket-ebook';
         }          
         return ($mimetypes); 
+    }
+
+    /**
+     * Add a settings link to pluginlist
+     *
+     * @param $inks
+     * @return mixed
+     */
+    static public function plugin_settings_link( $links ) {
+        $settings_link = '<a href="options-general.php?page=mime-types-extended/class-mime-types-extended.php">' . __( 'Settings', 'mime_types_extended' )  . '</a>';
+        array_unshift($links, $settings_link);
+        return $links;
     }
         
 }

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Mime Types Extended v0.10\n"
+"Project-Id-Version: Mime Types Extended v0.11\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-23 21:02+0100\n"
-"PO-Revision-Date: 2014-08-12 08:00:02+0000\n"
+"PO-Revision-Date: 2014-11-30 14:09:10+0000\n"
 "Last-Translator: Frarnk Staude <frank@staude.net>\n"
 "Language-Team: frank@staude.net <frank@staude.net>\n"
 "MIME-Version: 1.0\n"
@@ -492,9 +492,14 @@ msgstr ".epub Dateien erlauben (eBook-Dateien)"
 msgid "enable .mobi files"
 msgstr "mobi Dateien erlauben (eBook-Dateien)"
 
+#: class-mime-types-extended.php:757
+#@ mime_types_extended
+msgid "Settings"
+msgstr "Einstellungen"
+
 #. translators: plugin header field 'Version'
 #: mime-types-extended.php:0
 #@ mime_types_extended
-msgid "0.10"
+msgid "0.11"
 msgstr ""
 

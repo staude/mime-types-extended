@@ -4,7 +4,7 @@ Donate link: http://www.staude.net/donate
 Tags: mimetypes, mimetype, mime, media, upload, filetypes
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 0.10
+Stable tag: 0.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,15 +52,11 @@ Send them by e-mail to frank@staude.net, I will then install the next update wit
 
 = I found a bug  =
 
-Please report it at http://bugs.staude.net
-
-Select the project "WP Plugin: Mime Types Extended" and report it.
+Please report it at https://github.com/staude/mime-types-extended/issues
 
 = I have a feature request =
 
-Please report it at http://bugs.staude.net
-
-Select the project "WP Plugin: Mime Types Extended" and report it.
+Please report it at https://github.com/staude/mime-types-extended/issues
 
 
 
@@ -73,15 +69,11 @@ Schick sie mir per e-mail an frank@staude.net, ich werde sie dann beim nächsten
 
 = Ich habe einen Fehler gefunden  =
 
-Bitte geh auf die Seite http://bugs.staude.net und melde dich dort an.
-
-Wähle das Projekt "WP Plugin: Mime Types Extended" und melde den Fehler.
+Bitte trag es ein auf https://github.com/staude/mime-types-extended/issues
 
 = Ich möchte eine neue Funktion vorschlage  =
 
-Bitte geh auf die Seite http://bugs.staude.net und melde dich dort an.
-
-Wähle das Projekt "WP Plugin: Mime Types Extended" und trage deinen Wunsch ein.
+Bitte trag es ein auf https://github.com/staude/mime-types-extended/issues
 
 
 
@@ -92,6 +84,11 @@ Wähle das Projekt "WP Plugin: Mime Types Extended" und trage deinen Wunsch ein.
 
 
 == Changelog ==
+
+= 0.11 =
+- Moved sourcecode to GitHub: https://github.com/staude/mime-types-extended
+- Moved Issuetracker to GitHub: https://github.com/staude/mime-types-extended/issues
+- Added link to settingspage in pluginlist
 
 = 0.10 =
 - Add mobi support
